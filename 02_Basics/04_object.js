@@ -107,6 +107,29 @@ the syntax : couse.courseInstructor
 const {courseInstructor : instructor} = course
 console.log(instructor);
 
+/* *************OR**************
+const {courseInstructor} = course
+console.log(courseInstructor);
+************************************/
 
 
+//**************API*************** */
+/*JSON : java-script-object-notation FILE : 
+{
+    name : 'SZHIBAM',
+    coursename : "js-in-hindi",
+    price : hindi
+}
 
+------or------
+[
+    {},
+    {},
+    {}
+]
+
+hum usually json ko objectme convert kr lete h
+waha se fetch krte jate h 
+*/ 
+//randomuserme : yaha se api uthaya
+//json api->format->beautify
