@@ -41,7 +41,8 @@ const obj2 = {3 : "c", 4: "d"}
 
 //const obj3 = {obj1, obj2} ---> ye wahi array wala problem dega xdxdxd
 const obj3 = Object.assign({}, obj1, obj2) //******neeche dekho */
-console.log(obj3);
+//>> console.log(obj3);
+//:: { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 
 /*
@@ -51,7 +52,8 @@ LEEEKIIIIIINNNN hum isko v kam use krne wale h
 */
 
 const obj4 = {...obj1, ...obj2}
-console.log(obj4);
+//>> console.log(obj4);
+//:: { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 
 //*******ALI RE ALI DATA BASE SE VALUES AAYI */
@@ -89,6 +91,22 @@ ye bohot ****kaam***** me aata h
 //checking is an object has an property
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+
+
+//*************DE-STRUCTURE OF AN OBJECT************
+const course = {
+    coursename : "js in hindi",
+    price : "999",
+    courseInstructor : "hitesh choudhury"
+}
+/*
+to make your code clean you want to avoid 
+the syntax : couse.courseInstructor
+*/
+//      kiska value chahiye     kaha se chahiye
+const {courseInstructor : instructor} = course
+console.log(instructor);
+
 
 
 
