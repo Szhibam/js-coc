@@ -67,3 +67,51 @@ function loginUserMessage(username = "defaultName"){
     }
     return `${username} just logged in`
 }
+
+//Shopping cards : useer keeps on adding products : u dont know how many products are in the cart and you have to 
+//add their products together --> WHICH MEANS YOU DONT KNOW THE NUMBER OF PARAMETERS THAT SHOULD BE PASSED
+
+function calculatePrice(...num1){
+    return num1;
+}
+//here "..." is known as ****REST OPERATOR****
+// >> console.log(calculatePrice(200, 400,500));
+// :: [ 200, 400, 500 ]
+
+function calculatePrice2(val1,val2,...num1){
+    return num1;
+}
+
+// >> console.log(calculatePrice2(200, 400,500,1000,1200));
+// :: [ 500, 1000, 1200 ]
+
+
+const user = {
+    username : "szhibam",
+    price : 199
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+// >> handleObject(user)
+// :: username is szhibam and price is 199
+
+/**
+ function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and mrp**** is ${anyObject.MMMMMRRRRRPPPP}`);
+ }
+
+ TYPECHECKING :: MMMMMRRRRRPPPP IS NOT DEFINED so it might give error 
+ */
+
+ handleObject({
+    username : "sam",
+    price : 799
+ })
+
+ const myNewArray = [100,200,300,400]
+
+ function returnSecontArray(arr){
+    return arr[1]
+ }
