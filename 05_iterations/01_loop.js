@@ -14,8 +14,18 @@ for (let index = 0; index < myArray.length; index++) {
     console.log(element);
 }
 
-while (condition) {
-    
 
-    //termination increment/decrement
+/*
+while (condition) {
+    termination increment/decrement
 }
+*/
+
+
+/*
+do {
+    
+} while (condition);
+*/
+
+
