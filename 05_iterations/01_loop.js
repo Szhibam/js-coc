@@ -13,3 +13,9 @@ for (let index = 0; index < myArray.length; index++) {
     if(element === "johnnySins") break;
     console.log(element);
 }
+
+while (condition) {
+    
+
+    //termination increment/decrement
+}
