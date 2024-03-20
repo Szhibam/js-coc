@@ -78,8 +78,15 @@ const addTwo = (num1, num2) =>  (num1+num2)
  >> const addTwo = (num1,num2) => {username : "hitesh"}   -->undefined ----> you have to __WRAP__ it inside parentheses */
 
 const addTwo = (num1,num2) => ({username : "hitesh"} )
-                                          
-console.log(addTwo(3,4));
+
+// console.log(addTwo(3,4));
+//:: { username: 'hitesh' }
+
+
+const myArray = [2,3,4,5,6]
+/*_____use case_____
+myArray.forEach(function(){})
+myArray.forEach(()=>())                     */
 
 
   
