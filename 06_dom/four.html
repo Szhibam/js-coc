@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai or code | DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //___________ADD ELEMENTS__________________
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    //innerchild pura traverse krta h jaha appendChild pura traverse nhi krta 
+
+    function optimizedAddLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    optimizedAddLang("goLang")
+
+    //_____________EDIT ELEMENTS_______________
+    //step 1 : select an element
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //step-2 : change
+    //secondLang.innerHTML = "Mojo" ----> again we are using innerHTML which is not optimized
+    //step-2 : task -1 : crdeate element
+    const new_li = document.createElement("li")
+    new_li.textContent = "Mojo"
+    secondLang.replaceWith(new_li)
+    //in this case "SecondLang" is the refference of the element that we want to change so no traversing is required as we already have the refference
+
+
+    //_____Edit method 2_____
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>ReactJs</li>'
+
+
+    //___________REMOVE_______________
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
