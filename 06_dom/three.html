@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or Code</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    
+</body >
+
+<script>
+    const div = document.createElement('div')
+    console.log(div); //-->  <div></div>
+    //set a class name
+    div.className = "main" // ye bhi pehle values leke ate h fir set krte h
+    //set an id for he "div"
+    div.id = Math.round(Math.random() * 10 + 1)
+    //set custom attributes
+    div.setAttribute("title", "generate a title") // ye us value ko leke nhi aata direct set krta h
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+    //abhi ye div bass memory k andar h  lekin page pe nhi show ho rha 
+    //page pe show krne k liye isko bolna padega ki page pe attachting v karna h
+
+    // >> div.innerText = "chaiiiii or Code" --->ye overwrite krta h 
+    // pehle value ko leke ayega fir overwrite karega
+    //alternate-->
+    const addText = document.createTextNode("chaiiii or code")
+    div.append(addText)
+
+    //attaching
+    document.body.appendChild(div)
+
+</script>
+
+</html>
