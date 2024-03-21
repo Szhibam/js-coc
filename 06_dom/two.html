@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai or code</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">TuesDay</div>
+        <div class="day">WednusDay</div>
+        <div class="day">ThursDay</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);   //-->HTML collection
+    console.log(parent.children[0].innerHTML);
+
+    for (let index = 0; index < parent.children.length; index++) {
+        console.log(parent.children[index].innerHTML)
+        
+    }
+
+    parent.children[1].style.color = "orange"
+
+    console.log(parent.firstElementChild);
+
+
+    const day1 = document.querySelector('.day')
+    console.log(day1);
+
+    //go to the parent from child
+    console.log(day1.parentElement);
+    //next element
+    console.log(day1.nextElementSibling);
+
+    console.log("NODES : ", parent.childNodes);
+
+
+</script>
+</html>
