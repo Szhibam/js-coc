@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>async js</h1>
+    <button id ="stop"> Stop</button>
+</body>
+<script>
+    // ____set time out_____ :: ek method h jo ek api ko v call krta h
+    // browser --> Window objevt -->setinterva;, settimeout
+    //setinterval : ek interval k bad bar bar ek kaam krta rhega
+    //set time out arguments : handler : callback function, time(in milisecolds)
+    /*
+        __________using call back function______
+        setTimeout(function(){
+        console.log("szhibam");
+        },200)
+    */
+    //_________USING FUNCTION REFFR.____
+    const saySzhibam = function(){
+        console.log("szhibam");
+    }
+    setTimeout(saySzhibam ,2000);
+
+    // h1--> async js ---> change it to project on async js after 2sec
+    
+    const changeText = function () {
+        document.querySelector('h1').innerHTML
+        = "project on async js"
+    }
+
+    const changeMe = setTimeout(changeText,3000)
+
+    //now if you want to stop the changing inner text of the wesite
+    //if some one clicks on the stop button before the set time
+
+    document.querySelector('#stop').
+    addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("Stopped");
+    })
+     
+    
+</script>
+</html>
