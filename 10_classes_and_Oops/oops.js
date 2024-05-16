@@ -28,7 +28,7 @@ function User(username, loginCount, isLOggedIn){
     this.loginCount = loginCount
     this.isLOggedIn = isLOggedIn
 
-    // return this
+    // return this ----> isko karo ya na karo return to implicitely hota hi hai
 }
 
 /*
@@ -40,3 +40,9 @@ console.log(userOne);
 const userOne = new User('szhibam', 12, true)
 const uerTwo = new User("Chai or code", 12, false)
 console.log(userOne);
+
+//  new key word : 
+//    jaise hi aap new keyword use kroge sabse pehle ek empty object create hota h jisko hum instance bolte h
+//    ek constructor function call hote h 
+//    this key word k andar arg wagera inject hota h
+//    object return hoga
