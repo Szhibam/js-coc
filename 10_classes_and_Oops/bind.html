@@ -6,24 +6,26 @@
     <title>React</title>
 </head>
 <body>
-    <button>button clicked</button>
+    <button>Button Clicked</button>
 </body>
 <script>
-    class  react{
+    class React {
         constructor(){
-            this.library = "React",
+            this.library = "React"
             this.server = "https://localhost:300"
 
-            // requirement
+            //requirement
             document
                 .querySelector('button')
-                .addEventListener('click', this.handleclicked)
+                .addEventListener('click', this.handleClick.bind(this))
 
-            handleclicked(){
-                console.log("button clicked");
-                console.log(this.server);
-            }
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
         }
     }
+
+    const app = new React()
 </script>
 </html>
