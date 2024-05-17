@@ -34,3 +34,8 @@ for (let [key,value]  of Object.entries(chai)) {
         console.log(`${key} : ${value}`);
     }
 }
+
+/*      price : 250
+        isAvaulable : true
+
+    dhyan se dekho key-value me name nhi aaya kyu ki wo humne inumerable false kr diya h */

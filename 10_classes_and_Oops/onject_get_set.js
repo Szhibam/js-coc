@@ -12,5 +12,6 @@ const User = {
 
 }
 
+//  factory function
 const tea = Object.create(User)
 console.log(tea.email);
